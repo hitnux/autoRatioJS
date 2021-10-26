@@ -21,6 +21,7 @@ class autoRatio {
                 if (navigator.clipboard)
                     navigator.clipboard.writeText(this.innerText).then(
                         function () {
+                            console.log(self.innerText);
                             self.classList.add('copied');
                             setTimeout(() => {
                                 self.classList.remove('copied');
