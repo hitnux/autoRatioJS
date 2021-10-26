@@ -27,8 +27,8 @@ class autoRatio {
                                 self.classList.remove('copied');
                             }, 1000);
                         },
-                        function (err) {
-                            alert(err);
+                        function () {
+                            alert('Please press Ctrl/Cmd+C to copy');
                         }
                     );
             });
