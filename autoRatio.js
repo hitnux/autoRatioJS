@@ -15,12 +15,18 @@ class autoRatio {
     }
 
     clicked() {
+        var inp = document.createElement('input');
+        inp.id = 'auto-ratio-input';
+        document.getElementsByTagName('body')[0].appendChild(inp); 
         document.querySelectorAll(`.${this.conf.active}`).forEach((a) =>{
             a.addEventListener('click', function(){
                 var self = this;
+                inp.value = this.innerText;
+                inp.select();
+                inp.setSelectionRange(0, 99999);
                 console.log(this.innerText);
                 if (navigator.clipboard)
-                    navigator.clipboard.writeText(this.innerText).then(
+                    navigator.clipboard.writeText(inp.value).then(
                         function () {
                             self.classList.add('copied');
                             setTimeout(() => {
