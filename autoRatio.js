@@ -17,7 +17,7 @@ class autoRatio {
     clicked() {
         document.querySelectorAll(`.${this.conf.active}`).forEach((a) =>{
             a.addEventListener('click', function(){
-                navigator.clipboard.write(this.innerText).then(
+                navigator.clipboard.writeText(this.innerText).then(
                     function () {
                         this.classList.add('copied');
                         setTimeout(() => {
