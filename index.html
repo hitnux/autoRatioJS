@@ -1,26 +1,28 @@
-
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <title>Auto Ratio JS</title>
-  </head>
-  <body >
-    <div>
-        <div class="auto-ratio">
-            <img src="https://via.placeholder.com/1080x300"/>
-        </div>
-        <hr>
-        <div>
-            <picture class="auto-ratio">
-                <source media="(max-width: 1024px)" srcset="https://via.placeholder.com/400x200">
-                <source media="(min-width: 1025px)" srcset="https://via.placeholder.com/1080x300">
-                <img src="https://via.placeholder.com/1080x300">
-            </picture>
-        </div>
+<html lang="en">
+
+<head>
+  <title>Auto Ratio JS</title>
+</head>
+
+<body>
+  <div>
+    <div class="auto-ratio">
+      <img src="https://via.placeholder.com/1080x300" />
     </div>
-    <script type="text/javascript" src="/autoRatio.js"></script>
-    <script type="text/javascript">
-        var obje = new autoRatio();
-    </script>
-  </body>
+    <hr>
+    <div>
+      <picture class="auto-ratio">
+        <source media="(max-width: 1024px)" srcset="https://via.placeholder.com/400x200">
+        <source media="(min-width: 1025px)" srcset="https://via.placeholder.com/1080x300">
+        <img src="https://via.placeholder.com/1080x300">
+      </picture>
+    </div>
+  </div>
+  <script type="text/javascript" src="./autoRatio.js"></script>
+  <script type="text/javascript">
+    var obje = new autoRatio();
+  </script>
+</body>
+
 </html>
