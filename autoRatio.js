@@ -17,11 +17,17 @@ class autoRatio {
     clicked() {
         document.querySelectorAll(`.${this.conf.active}`).forEach((a) =>{
             a.addEventListener('click', function(){
-                navigator.clipboard.writeText(this.innerText);
-                this.classList.add('copied');
-                setTimeout(() => {
-                    this.classList.remove('copied');
-                }, 1000);
+                navigator.clipboard.writeText(this.innerText).then(
+                    function () {
+                        this.classList.add('copied');
+                        setTimeout(() => {
+                            this.classList.remove('copied');
+                        }, 1000);
+                    },
+                    function () {
+                        alert('error');
+                    }
+                );
             });
         });
     }
