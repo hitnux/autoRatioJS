@@ -18,10 +18,10 @@ class autoRatio {
         document.querySelectorAll(`.${this.conf.active}`).forEach((a) =>{
             a.addEventListener('click', function(){
                 var self = this;
+                console.log(this.innerText);
                 if (navigator.clipboard)
                     navigator.clipboard.writeText(this.innerText).then(
                         function () {
-                            console.log(self.innerText);
                             self.classList.add('copied');
                             setTimeout(() => {
                                 self.classList.remove('copied');
