@@ -39,6 +39,10 @@ class autoRatio {
                     );
                 else 
                     document.execCommand('copy');
+                    self.classList.add('copied');
+                    setTimeout(() => {
+                        self.classList.remove('copied');
+                    }, 1000);
             });
         });
     }
