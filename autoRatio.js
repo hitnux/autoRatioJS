@@ -24,7 +24,7 @@ class autoRatio {
                 inp.value = this.innerText;
                 inp.select();
                 inp.setSelectionRange(0, 99999);
-                console.log(this.innerText);
+                console.log(inp.value);
                 if (navigator.clipboard)
                     navigator.clipboard.writeText(inp.value).then(
                         function () {
