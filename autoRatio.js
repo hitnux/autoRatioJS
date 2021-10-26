@@ -38,7 +38,7 @@ class autoRatio {
                         }
                     );
                 else 
-                    alert('Please press Ctrl/Cmd+C to copy');
+                    document.execCommand('copy');
             });
         });
     }
